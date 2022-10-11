@@ -1,3 +1,12 @@
+
+/* Activity:
+Create a class, Heater that contains a single integer field, temperature. Define a 
+constructor that takes no parameters. The temperature field should be set to the value 15 in the
+ constructor. Define the mutators: warmer and cooler, whose effect is to increase or decrease the value
+  of the temperature by 5 respectively. Define an accessor method to return the value of temperature. Demonstrate 
+  the use of Heater class.  */
+
+
 #include <iostream>
 using namespace std;
 
