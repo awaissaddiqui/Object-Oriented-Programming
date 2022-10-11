@@ -18,6 +18,10 @@ class Point{
 		Point(){
 			x = 0;
 			y = 0; 
+		};		
+		Point(int a, int b){
+			x = a;
+			y = b;
 		};
 	void setX(double xCon){
 		x= xCon;
@@ -36,13 +40,23 @@ class Point{
 	}
 };
 main(){
-	Point p1;
+	//Object 1
+	Point p1, p2(5, 2);
 	cout<<"Original P1= ";
 	p1.display();
 	
 	p1.setX(2);
 	p1.setY(3);
-	cout<<"\nUpdated P1= ";
+	cout<<"Updated P1= ";
 	p1.display();
+	
+	//Object 2
+	
+	cout<<"\nOriginal P2= ";
+	p2.display();
+	p2.setX(3);
+	p2.setY(6);
+	cout << "Updated P2= ";
+	p2.display();
 	
 }
