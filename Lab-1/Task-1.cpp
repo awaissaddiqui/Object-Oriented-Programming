@@ -9,7 +9,7 @@ class Heater{
 			temprature = 15;
 		}		
 	void warmer(){
-			temprature = temprature-5;
+			temprature = temprature+5;
 		};
 	void cooler(){
 			temprature = temprature-5;
@@ -20,6 +20,7 @@ class Heater{
 };
 main(){
 	//Object 1
+	cout<<"Heater=1"<<endl;
 	Heater h1;
 	h1.show();
 	h1.warmer();
@@ -27,7 +28,7 @@ main(){
 	h1.cooler();
 	h1.show();
 	//Object 2
-	
+	cout<<"\nHeater=2"<<endl;
 	Heater h2;
 	h2.show();
 	h2.cooler();
