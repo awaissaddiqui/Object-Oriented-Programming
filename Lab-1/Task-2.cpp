@@ -24,8 +24,25 @@ class Point{
 	};
 	void setY(double yCon){
 		y = yCon;
+	};
+	int getX(){
+		return x;
+	};
+	int getY(){
+		return y;
+	};
+	void display(){
+		cout<<"("<<getX()<<", "<<getY()<<")"<<endl;
 	}
 };
 main(){
+	Point p1;
+	cout<<"Original P1= ";
+	p1.display();
+	
+	p1.setX(2);
+	p1.setY(3);
+	cout<<"\nUpdated P1= ";
+	p1.display();
 	
 }
