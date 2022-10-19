@@ -47,4 +47,5 @@ main(){
 	obj1.withdrawal(500);
 	cout<<"\n";
 	obj1.display();
+	
 }
