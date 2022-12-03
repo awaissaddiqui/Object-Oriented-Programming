@@ -58,5 +58,5 @@ class cylinder:public circle{
 
 
 main(){
-	shape
+	shape 
 }
