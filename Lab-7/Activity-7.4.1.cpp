@@ -1,62 +1,71 @@
 #include <iostream>
 using namespace std;
+
 class shape{
-	private:
-		float area, volume;
+	protected:
+		double area, volume;
 	public:
-	computing_Area(){
-		
-	}
-	computing_Volume(){
-		
-	}
-	void display(){
-		
-	}
+		virtual void Area()=0;
+		virtual void Volume()=0;
+		virtual	void display() = 0;
 };
 class point:public shape{
-	private:
-		int x, y;
+	protected:
+		int xC, yC;
 	public:
-		point(){
-			x=0;
-			y=0;
-		};
-		point(int a , int b){
-			x = a;
-			y = b;
-		}; 
+		point():xC(0),yC(0){}
+		point(int x, int y):xC(x),yC(y){}
+		void Area(){
+			 area=0;
+		}
+		void Volume(){
+			 volume=0;
+		}
+		void display(){
+		cout<<"X coordinate = "<<xC<<"\t Y coordinate = "<<yC<<endl;
+			}
+};
+class Circle:public point{
+	protected:
+		int radius;
+	public:
+		Circle():point(),radius(1){}
+		Circle(int x , int y, int r):point(x, y),radius(r){}
+		void Area(){
+			area = 3.14 * radius * radius;
+		}
+		void Volume(){
+			volume =0;
+		}
+		void display(){
+			cout<<"X-coordinate = "<<x<<"\t X-coordinate = "<<y<<endl;
+			cout<<"Radius = "<<radius<<endl;
+			cout<<"Area of Circle = "<<area<<endl;
+		}
+};
+class Cylinder:public Circle{
+	protected:
+		double height;
+	public:
+		Cylinder():Circle(), height(1){}
+		Cylinder(int x, int y, int r, double h):Circle(x , y, r),height(h){}
+		void Area(){
+			area= 2 * 3.14 * radius * (height + radius);
+		}
+		void Volume(){
+			volume = 3.14 * radius * radius * height;
+		}
+		void  display(){
+			cout<<"Area of Cylinder = "<<area<<endl;
+			cout<<"Volume of Cylinder = "<<volume<<endl;
+			cout<<"Radius of Cylinder = "<<radius; 
+		}
 		
 };
-class circle:public point{
-	private:
-		double radius;
-	public:
-		circle(){
-			radius = 0.0;
-		}
-		circle(double i, int j, int k){
-			radius = i;
-			x = j;
-			y = k;
-		}
-};
-class cylinder:public circle{
-	private:
-		double height;
-    public:
-    	cylinder(){
-    		height = 0.0;
-		}
-		cylinder(int x , int y, double radius, double h){
-			x =j;
-			y =k;
-			radius =i;
-			h=height;
-		}
-};
-
-
 main(){
-	shape 
+	shape *s1;
+	point p1(4,6);
+	Circle c1(2,3,5);
+	Cylinder Cy(7,8,1,9)
+	
 }
