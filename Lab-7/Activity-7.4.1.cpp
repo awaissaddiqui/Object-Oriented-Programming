@@ -22,7 +22,7 @@ class point:public shape{
 			 volume=0;
 		}
 		void display(){
-		cout<<"X coordinate = "<<xC<<"\t Y coordinate = "<<yC<<endl;
+		cout<<"Point \t X coordinate = "<<xC<<"\t Y coordinate = "<<yC<<endl;
 			}
 };
 class Circle:public point{
@@ -38,7 +38,7 @@ class Circle:public point{
 			volume =0;
 		}
 		void display(){
-			cout<<"X-coordinate = "<<x<<"\t X-coordinate = "<<y<<endl;
+			cout<<"X-coordinate = "<<xC<<"\t Y-coordinate = "<<yC<<endl;
 			cout<<"Radius = "<<radius<<endl;
 			cout<<"Area of Circle = "<<area<<endl;
 		}
@@ -66,6 +66,16 @@ main(){
 	shape *s1;
 	point p1(4,6);
 	Circle c1(2,3,5);
-	Cylinder Cy(7,8,1,9)
+	Cylinder Cy(7,8,1,9);
+	
+	s1 = &p1;
+	s1->display();
+	
+	s1 = &c1;
+	s1->display();
+	
+	s1 = &Cy;
+	s1->display();
+	
 	
 }
