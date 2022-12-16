@@ -66,7 +66,7 @@ main(){
 	shape *s1;
 	point p1(4,6);
 	Circle c1(2,3,5);
-	Cylinder Cy(7,8,1,9);
+	Cylinder Cy(7,8,6,9);
 	
 	s1 = &p1;
 	s1->display();

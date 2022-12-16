@@ -6,8 +6,6 @@ y-coordinates of the point. Provide a no argument and a 2-argument
   values to the calling function. Provide a display method to display the point in (x, y) format. 
   Make appropriate functions const. 
 */
-
-
 #include <iostream>
 using namespace std;
 
